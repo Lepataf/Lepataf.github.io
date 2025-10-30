@@ -1,0 +1,157 @@
+/* style.css */
+:root {
+    --bleu-principal: #004a99;
+    --bleu-clair: #f0f7ff;
+    --gris-bordure: #d4d4d4;
+    --texte-normal: #333;
+    --texte-lien: #0056b3;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    display: flex;
+    margin: 0;
+    background-color: #f9f9f9;
+    color: var(--texte-normal);
+}
+
+/* --- Barre Latérale de Navigation --- */
+.sidebar {
+    width: 280px;
+    background-color: #fff;
+    border-right: 1px solid var(--gris-bordure);
+    height: 100vh;
+    padding: 20px;
+    box-sizing: border-box;
+    position: fixed;
+    top: 0;
+    left: 0;
+    overflow-y: auto;
+}
+
+.sidebar h1 {
+    font-size: 1.5em;
+    color: var(--bleu-principal);
+    margin: 0 0 20px 0;
+    border-bottom: 2px solid var(--bleu-principal);
+    padding-bottom: 10px;
+}
+
+.sidebar nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.sidebar nav > ul > li {
+    margin-bottom: 10px;
+}
+
+.sidebar nav > ul > li > a,
+.sidebar nav > ul > li > span {
+    display: block;
+    padding: 10px 15px;
+    text-decoration: none;
+    color: var(--texte-lien);
+    font-weight: 600;
+    border-radius: 6px;
+    transition: background-color 0.2s ease;
+}
+
+.sidebar nav > ul > li > a:hover {
+    background-color: var(--bleu-clair);
+}
+
+.sidebar nav > ul > li > span {
+    color: var(--texte-normal);
+    cursor: pointer;
+    position: relative;
+}
+
+/* Style pour les sous-menus */
+.sidebar nav ul ul {
+    list-style: none;
+    padding-left: 20px;
+    margin-top: 5px;
+    display: none; /* Caché par défaut */
+}
+
+.sidebar nav ul ul a {
+    display: block;
+    padding: 8px 10px;
+    text-decoration: none;
+    color: var(--texte-lien);
+    border-radius: 4px;
+    font-size: 0.95em;
+}
+
+.sidebar nav ul ul a:hover {
+    background-color: #f0f0f0;
+}
+
+/* --- Contenu Principal --- */
+.main-content {
+    margin-left: 320px; /* Largeur sidebar + padding */
+    padding: 30px 40px;
+    width: calc(100% - 320px);
+    box-sizing: border-box;
+}
+
+.main-content h2 {
+    font-size: 2.2em;
+    color: #000;
+    border-bottom: 1px solid var(--gris-bordure);
+    padding-bottom: 10px;
+}
+
+/* --- Style Accordéon pour les fichiers --- */
+.accordion {
+    background-color: #fff;
+    color: #444;
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    border: none;
+    border-bottom: 1px solid var(--gris-bordure);
+    text-align: left;
+    outline: none;
+    font-size: 1.2em;
+    font-weight: 600;
+    transition: 0.4s;
+}
+
+.accordion:first-of-type {
+    border-top: 1px solid var(--gris-bordure);
+}
+
+.accordion:hover {
+    background-color: var(--bleu-clair);
+}
+
+.panel {
+    padding: 0 18px;
+    background-color: white;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+    border-bottom: 1px solid var(--gris-bordure);
+}
+
+.panel ul {
+    list-style-type: none;
+    padding: 15px 0;
+}
+
+.panel li {
+    padding: 8px 0;
+    border-bottom: 1px dashed #eee;
+}
+
+.panel li a {
+    text-decoration: none;
+    color: var(--texte-lien);
+}
+
+.panel li a:hover {
+    text-decoration: underline;
+}
