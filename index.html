@@ -3,132 +3,101 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mes cours en ligne</title>
+    <title>Dossier Ordi - Vue d'ensemble</title>
     <style>
         body {
-            font-family: "Segoe UI", Arial, sans-serif;
-            margin: 0;
-            background-color: #f9f9f9;
-        }
-        header {
-            background-color: #4CAF50;
-            color: white;
-            padding: 1.5rem;
-            text-align: center;
-        }
-        nav {
-            display: flex;
-            justify-content: center;
-            background-color: #333;
-            flex-wrap: wrap;
-        }
-        nav button {
-            background-color: #333;
-            color: white;
-            border: none;
-            padding: 14px 20px;
-            cursor: pointer;
-            font-size: 16px;
-        }
-        nav button:hover, nav button.active {
-            background-color: #4CAF50;
-        }
-        .content {
-            display: none;
-            padding: 20px;
-        }
-        .content.active {
-            display: block;
-        }
-        h2 {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 20px;
+            background-color: #f4f4f4;
             color: #333;
         }
-        ul {
-            list-style: none;
-            padding-left: 0;
+        .container {
+            max-width: 800px;
+            margin: auto;
+            background: #fff;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
         }
-        ul li {
-            margin: 8px 0;
-        }
-        a {
-            color: #0078d4;
-            text-decoration: none;
-        }
-        a:hover {
-            text-decoration: underline;
-        }
-        footer {
+        h1 {
+            color: #0056b3;
             text-align: center;
-            background-color: #eee;
-            padding: 10px;
-            font-size: 14px;
-            margin-top: 20px;
+            margin-bottom: 30px;
+        }
+        h2 {
+            color: #0056b3;
+            margin-top: 25px;
+        }
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        li {
+            background-color: #e9e9e9;
+            margin-bottom: 10px;
+            padding: 15px;
+            border-radius: 5px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        li a {
+            text-decoration: none;
+            color: #333;
+            font-weight: bold;
+            flex-grow: 1;
+        }
+        li a:hover {
+            color: #0056b3;
+        }
+        .note {
+            background-color: #fff3cd;
+            border-left: 5px solid #ffc107;
+            padding: 15px;
+            margin: 20px 0;
+            border-radius: 4px;
+            color: #664d03;
         }
     </style>
 </head>
 <body>
+    <div class="container">
+        <h1>Contenu du dossier "Ordi"</h1>
+        <p>Bienvenue sur la page de présentation de votre dossier "Ordi". Vous trouverez ci-dessous la liste des principaux dossiers qu'il contient :</p>
 
-<header>
-    <h1>📚 Mes cours en ligne</h1>
-    <p>Bienvenue sur ma plateforme personnelle d’hébergement de cours</p>
-</header>
+        <h2>Dossiers principaux :</h2>
+        <ul>
+            <li><a href="#pt">PT</a></li>
+            <li><a href="#ptsi">PTSI</a></li>
+            <li><a href="#tipe">TIPE</a></li>
+            <li><a href="#organisation">Organisation</a></li>
+            <li><a href="#si">SI</a></li>
+            <li><a href="#prepa">Prépa</a></li>
+        </ul>
 
-<nav>
-    <button class="tab-button active" data-tab="maths">Mathématiques</button>
-    <button class="tab-button" data-tab="physique">Physique</button>
-    <button class="tab-button" data-tab="informatique">Informatique</button>
-    <button class="tab-button" data-tab="francais">Français</button>
-</nav>
+        <div class="note">
+            <p><strong>Information importante :</strong> Pour le moment, je ne suis pas en mesure de créer des pages individuelles pour chaque sous-dossier et d'y lister tous les fichiers qu'ils contiennent. Je peux uniquement vous fournir cette vue d'ensemble des dossiers de premier niveau.</p>
+            <p>Si vous souhaitez des informations sur un dossier spécifique, n'hésitez pas à me le demander.</p>
+        </div>
 
-<div id="maths" class="content active">
-    <h2>📘 Cours de Mathématiques</h2>
-    <ul>
-        <li><a href="https://drive.google.com/file/d/ID1/view?usp=sharing" target="_blank">Cours d’Algèbre</a></li>
-        <li><a href="https://drive.google.com/file/d/ID2/view?usp=sharing" target="_blank">Cours de Géométrie</a></li>
-    </ul>
-</div>
+        <h2 id="pt">Dossier : PT</h2>
+        <p>Ce dossier contient des éléments liés à la filière PT. (Contenu détaillé non disponible pour le moment.)</p>
 
-<div id="physique" class="content">
-    <h2>⚛️ Cours de Physique</h2>
-    <ul>
-        <li><a href="https://drive.google.com/file/d/ID3/view?usp=sharing" target="_blank">Mécanique</a></li>
-        <li><a href="https://drive.google.com/file/d/ID4/view?usp=sharing" target="_blank">Électricité</a></li>
-    </ul>
-</div>
+        <h2 id="ptsi">Dossier : PTSI</h2>
+        <p>Ce dossier contient des éléments liés à la filière PTSI. (Contenu détaillé non disponible pour le moment.)</p>
 
-<div id="informatique" class="content">
-    <h2>💻 Cours d’Informatique</h2>
-    <ul>
-        <li><a href="https://drive.google.com/file/d/ID5/view?usp=sharing" target="_blank">Introduction à la programmation</a></li>
-        <li><a href="https://drive.google.com/file/d/ID6/view?usp=sharing" target="_blank">Développement Web</a></li>
-    </ul>
-</div>
+        <h2 id="tipe">Dossier : TIPE</h2>
+        <p>Ce dossier contient des éléments liés aux TIPE (Travaux d'Initiative Personnelle Encadrés). (Contenu détaillé non disponible pour le moment.)</p>
 
-<div id="francais" class="content">
-    <h2>📖 Cours de Français</h2>
-    <ul>
-        <li><a href="https://drive.google.com/file/d/ID7/view?usp=sharing" target="_blank">Grammaire</a></li>
-        <li><a href="https://drive.google.com/file/d/ID8/view?usp=sharing" target="_blank">Littérature</a></li>
-    </ul>
-</div>
+        <h2 id="organisation">Dossier : Organisation</h2>
+        <p>Ce dossier contient des éléments liés à l'organisation. (Contenu détaillé non disponible pour le moment.)</p>
 
-<footer>
-    © 2025 - Mon site de cours | Hébergé sur GitHub Pages
-</footer>
+        <h2 id="si">Dossier : SI</h2>
+        <p>Ce dossier contient des éléments liés aux Sciences de l'Ingénieur. (Contenu détaillé non disponible pour le moment.)</p>
 
-<script>
-    const buttons = document.querySelectorAll('.tab-button');
-    const contents = document.querySelectorAll('.content');
-
-    buttons.forEach(btn => {
-        btn.addEventListener('click', () => {
-            buttons.forEach(b => b.classList.remove('active'));
-            contents.forEach(c => c.classList.remove('active'));
-            btn.classList.add('active');
-            document.getElementById(btn.dataset.tab).classList.add('active');
-        });
-    });
-</script>
-
+        <h2 id="prepa">Dossier : Prépa</h2>
+        <p>Ce dossier contient des éléments liés à la Prépa. (Contenu détaillé non disponible pour le moment.)</p>
+    </div>
 </body>
 </html>
