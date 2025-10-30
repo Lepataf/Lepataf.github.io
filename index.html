@@ -6,25 +6,22 @@
     <title>Mes cours en ligne</title>
     <style>
         body {
-            font-family: Arial, sans-serif;
+            font-family: "Segoe UI", Arial, sans-serif;
             margin: 0;
-            padding: 0;
-            background-color: #f7f7f7;
+            background-color: #f9f9f9;
         }
-
         header {
             background-color: #4CAF50;
             color: white;
-            padding: 20px;
+            padding: 1.5rem;
             text-align: center;
         }
-
         nav {
             display: flex;
             justify-content: center;
             background-color: #333;
+            flex-wrap: wrap;
         }
-
         nav button {
             background-color: #333;
             color: white;
@@ -33,102 +30,102 @@
             cursor: pointer;
             font-size: 16px;
         }
-
-        nav button:hover {
-            background-color: #555;
-        }
-
-        nav button.active {
+        nav button:hover, nav button.active {
             background-color: #4CAF50;
         }
-
-        .tab-content {
-            padding: 20px;
+        .content {
             display: none;
+            padding: 20px;
         }
-
-        .tab-content.active {
+        .content.active {
             display: block;
         }
-
         h2 {
             color: #333;
         }
-
         ul {
-            list-style: disc;
-            padding-left: 20px;
+            list-style: none;
+            padding-left: 0;
+        }
+        ul li {
+            margin: 8px 0;
+        }
+        a {
+            color: #0078d4;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        footer {
+            text-align: center;
+            background-color: #eee;
+            padding: 10px;
+            font-size: 14px;
+            margin-top: 20px;
         }
     </style>
 </head>
 <body>
 
 <header>
-    <h1>Plateforme de cours en ligne</h1>
-    <p>Bienvenue sur votre espace d’apprentissage !</p>
+    <h1>📚 Mes cours en ligne</h1>
+    <p>Bienvenue sur ma plateforme personnelle d’hébergement de cours</p>
 </header>
 
 <nav>
-    <button class="tab-button active" data-tab="math">Mathématiques</button>
+    <button class="tab-button active" data-tab="maths">Mathématiques</button>
     <button class="tab-button" data-tab="physique">Physique</button>
     <button class="tab-button" data-tab="informatique">Informatique</button>
     <button class="tab-button" data-tab="francais">Français</button>
 </nav>
 
-<div id="math" class="tab-content active">
-    <h2>Mathématiques</h2>
-    <p>Voici les cours disponibles en mathématiques :</p>
+<div id="maths" class="content active">
+    <h2>📘 Cours de Mathématiques</h2>
     <ul>
-        <li>Algèbre</li>
-        <li>Géométrie</li>
-        <li>Calcul différentiel</li>
+        <li><a href="https://drive.google.com/file/d/ID1/view?usp=sharing" target="_blank">Cours d’Algèbre</a></li>
+        <li><a href="https://drive.google.com/file/d/ID2/view?usp=sharing" target="_blank">Cours de Géométrie</a></li>
     </ul>
 </div>
 
-<div id="physique" class="tab-content">
-    <h2>Physique</h2>
-    <p>Voici les cours disponibles en physique :</p>
+<div id="physique" class="content">
+    <h2>⚛️ Cours de Physique</h2>
     <ul>
-        <li>Mécanique</li>
-        <li>Électricité</li>
-        <li>Thermodynamique</li>
+        <li><a href="https://drive.google.com/file/d/ID3/view?usp=sharing" target="_blank">Mécanique</a></li>
+        <li><a href="https://drive.google.com/file/d/ID4/view?usp=sharing" target="_blank">Électricité</a></li>
     </ul>
 </div>
 
-<div id="informatique" class="tab-content">
-    <h2>Informatique</h2>
-    <p>Voici les cours disponibles en informatique :</p>
+<div id="informatique" class="content">
+    <h2>💻 Cours d’Informatique</h2>
     <ul>
-        <li>Introduction à la programmation</li>
-        <li>Structures de données</li>
-        <li>Développement web</li>
+        <li><a href="https://drive.google.com/file/d/ID5/view?usp=sharing" target="_blank">Introduction à la programmation</a></li>
+        <li><a href="https://drive.google.com/file/d/ID6/view?usp=sharing" target="_blank">Développement Web</a></li>
     </ul>
 </div>
 
-<div id="francais" class="tab-content">
-    <h2>Français</h2>
-    <p>Voici les cours disponibles en français :</p>
+<div id="francais" class="content">
+    <h2>📖 Cours de Français</h2>
     <ul>
-        <li>Grammaire</li>
-        <li>Littérature</li>
-        <li>Expression écrite</li>
+        <li><a href="https://drive.google.com/file/d/ID7/view?usp=sharing" target="_blank">Grammaire</a></li>
+        <li><a href="https://drive.google.com/file/d/ID8/view?usp=sharing" target="_blank">Littérature</a></li>
     </ul>
 </div>
+
+<footer>
+    © 2025 - Mon site de cours | Hébergé sur GitHub Pages
+</footer>
 
 <script>
     const buttons = document.querySelectorAll('.tab-button');
-    const contents = document.querySelectorAll('.tab-content');
+    const contents = document.querySelectorAll('.content');
 
-    buttons.forEach(button => {
-        button.addEventListener('click', () => {
-            // Supprime l'état actif de tous les boutons et contenus
-            buttons.forEach(btn => btn.classList.remove('active'));
-            contents.forEach(content => content.classList.remove('active'));
-
-            // Active le bouton et le contenu correspondant
-            button.classList.add('active');
-            const tabId = button.getAttribute('data-tab');
-            document.getElementById(tabId).classList.add('active');
+    buttons.forEach(btn => {
+        btn.addEventListener('click', () => {
+            buttons.forEach(b => b.classList.remove('active'));
+            contents.forEach(c => c.classList.remove('active'));
+            btn.classList.add('active');
+            document.getElementById(btn.dataset.tab).classList.add('active');
         });
     });
 </script>
