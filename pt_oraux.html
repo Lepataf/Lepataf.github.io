@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PT - Oraux</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <aside class="sidebar">
+        <h1>Mes Cours</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Accueil</a></li>
+                
+                <li>
+                    <span class="toggle">PT</span>
+                    <ul class="submenu" style="display: block;">
+                        <li><a href="pt_anglais.html">ANGLAIS</a></li>
+                        <li><a href="pt_francais.html">Français</a></li>
+                        <li><a href="pt_info.html">INFO</a></li>
+                        <li><a href="pt_maths.html">MATHS</a></li>
+                        <li><a href="pt_physique.html">Physique</a></li>
+                        <li><a href="pt_si.html">SI</a></li>
+                        <li><a href="pt_oraux.html">Oraux</a></li>
+                        <li><a href="pt_organisation.html">Organisation</a></li>
+                    </ul>
+                </li>
+                
+                <li>
+                    <span class="toggle">PTSI</span>
+                    <ul class="submenu">
+                        <li><a href="ptsi_anglais.html">Anglais</a></li>
+                        <li><a href="ptsi_info.html">Info</a></li>
+                        <li><a href="ptsi_maths.html">Maths</a></li>
+                        <li><a href="ptsi_physique.html">Physique</a></li>
+                        <li><a href="ptsi_sii.html">SII</a></li>
+                    </ul>
+                </li>
+                
+                <li><a href="tipe.html">TIPE</a></li>
+                <li><a href="ressources.html">Ressources Sup.</a></li>
+            </ul>
+        </nav>
+    </aside>
+
+    <main class="main-content">
+        <h2>Oraux (PT)</h2>
+        
+        <button class="accordion">Documents Oraux (Toutes matières)</button>
+        <div class="panel">
+            <ul>
+                <li><a href="fichiers/PT/Oraux/2024_BanquePT_Anglais_LV1_sujet.pdf" target="_blank">Anglais LV1 2024 Sujet</a></li>
+                <li><a href="fichiers/PT/Oraux/2024_BanquePT_Anglais_LV2_sujet.pdf" target="_blank">Anglais LV2 2024 Sujet</a></li>
+                <li><a href="fichiers/PT/Oraux/BanquePT_Francais_2024.pdf" target="_blank">Français 2024 Sujet</a></li>
+                <li><a href="fichiers/PT/Oraux/2024_BanquePT_PhysiqueA_sujet.pdf" target="_blank">Physique A 2024 Sujet</a></li>
+                <li><a href="fichiers/PT/Oraux/2024_BanquePT_PhysiqueB_sujet.pdf" target="_blank">Physique B 2024 Sujet</a></li>
+                <li><a href="fichiers/PT/Oraux/2024_BanquePT_PhysiqueC_sujet.pdf" target="_blank">Physique C 2024 Sujet</a></li>
+                <li><a href="fichiers/PT/Oraux/2024_BanquePT_SI_A_sujet.pdf" target="_blank">SI A 2024 Sujet</a></li>
+                <li><a href="fichiers/PT/Oraux/2024_BanquePT_SI_B_sujet.pdf" target="_blank">SI B 2024 Sujet</a></li>
+                <li><a href="fichiers/PT/Oraux/Oral_PT_SI_2024.pdf" target="_blank">Oral SI 2024 (Dossier)</a></li>
+                <li><a href="fichiers/PT/Oraux/Sujet 1_Chaise roulante_PT_2016.pdf" target="_blank">Sujet SI - Chaise roulante (2016)</a></li>
+                <li><a href="fichiers/PT/Oraux/Sujet 2_Hydrolienne_PT_2017.pdf" target="_blank">Sujet SI - Hydrolienne (2017)</a></li>
+                <li><a href="fichiers/PT/Oraux/Sujet 3_Paramoteur_PT_2017.pdf" target="_blank">Sujet SI - Paramoteur (2017)</a></li>
+                <li><a href="fichiers/PT/Oraux/Sujet 4_Pousse seringue_PT_2017.pdf" target="_blank">Sujet SI - Pousse seringue (2017)</a></li>
+                <li><a href="fichiers/PT/Oraux/Sujet 5_Fraiseuse_PT_2018.pdf" target="_blank">Sujet SI - Fraiseuse (2018)</a></li>
+                <li><a href="fichiers/PT/Oraux/Sujet 6_Hélicoptère_PT_2018.pdf" target="_blank">Sujet SI - Hélicoptère (2018)</a></li>
+                <li><a href="fichiers/PT/Oraux/Sujet 7_Store banne_PT_2018.pdf" target="_blank">Sujet SI - Store banne (2018)</a></li>
+                <li><a href="fichiers/PT/Oraux/Conseils Oral.pdf" target="_blank">Conseils Oral (Maths)</a></li>
+                <li><a href="fichiers/PT/Oraux/InfoPT-Seq6-SujetsOraux-eleve.pdf" target="_blank">Info - Sujets Oraux</a></li>
+                <li><a href="fichiers/PT/Oraux/Oraux_2024.pdf" target="_blank">Oraux 2024 (Maths)</a></li>
+            </ul>
+        </div>
+
+    </main>
+
+    <script>
+        // Script simple pour les menus déroulants de la barre latérale
+        document.querySelectorAll('.sidebar .toggle').forEach(item => {
+            item.addEventListener('click', event => {
+                let submenu = item.nextElementSibling;
+                if (submenu.style.display === "block") {
+                    submenu.style.display = "none";
+                } else {
+                    submenu.style.display = "block";
+                }
+            });
+        });
+
+        // Script pour les accordéons
+        var acc = document.getElementsByClassName("accordion");
+        for (var i = 0; i < acc.length; i++) {
+            acc[i].addEventListener("click", function() {
+                this.classList.toggle("active");
+                var panel = this.nextElementSibling;
+                if (panel.style.maxHeight) {
+                    panel.style.maxHeight = null;
+                } else {
+                    panel.style.maxHeight = panel.scrollHeight + "px";
+                }
+            });
+        }
+    </script>
+
+</body>
+</html>
