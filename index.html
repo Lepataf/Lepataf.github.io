@@ -3,101 +3,67 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dossier Ordi - Vue d'ensemble</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            line-height: 1.6;
-            margin: 20px;
-            background-color: #f4f4f4;
-            color: #333;
-        }
-        .container {
-            max-width: 800px;
-            margin: auto;
-            background: #fff;
-            padding: 30px;
-            border-radius: 8px;
-            box-shadow: 0 0 10px rgba(0,0,0,0.1);
-        }
-        h1 {
-            color: #0056b3;
-            text-align: center;
-            margin-bottom: 30px;
-        }
-        h2 {
-            color: #0056b3;
-            margin-top: 25px;
-        }
-        ul {
-            list-style-type: none;
-            padding: 0;
-        }
-        li {
-            background-color: #e9e9e9;
-            margin-bottom: 10px;
-            padding: 15px;
-            border-radius: 5px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-        li a {
-            text-decoration: none;
-            color: #333;
-            font-weight: bold;
-            flex-grow: 1;
-        }
-        li a:hover {
-            color: #0056b3;
-        }
-        .note {
-            background-color: #fff3cd;
-            border-left: 5px solid #ffc107;
-            padding: 15px;
-            margin: 20px 0;
-            border-radius: 4px;
-            color: #664d03;
-        }
-    </style>
+    <title>Mes Cours de Prépa</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="container">
-        <h1>Contenu du dossier "Ordi"</h1>
-        <p>Bienvenue sur la page de présentation de votre dossier "Ordi". Vous trouverez ci-dessous la liste des principaux dossiers qu'il contient :</p>
 
-        <h2>Dossiers principaux :</h2>
-        <ul>
-            <li><a href="#pt">PT</a></li>
-            <li><a href="#ptsi">PTSI</a></li>
-            <li><a href="#tipe">TIPE</a></li>
-            <li><a href="#organisation">Organisation</a></li>
-            <li><a href="#si">SI</a></li>
-            <li><a href="#prepa">Prépa</a></li>
-        </ul>
+    <aside class="sidebar">
+        <h1>Mes Cours</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Accueil</a></li>
+                
+                <li>
+                    <span class="toggle">PT</span>
+                    <ul class="submenu">
+                        <li><a href="#pt-anglais">ANGLAIS</a></li>
+                        <li><a href="#pt-francais">Français</a></li>
+                        <li><a href="#pt-info">INFO</a></li>
+                        <li><a href="pt_maths.html">MATHS</a></li>
+                        <li><a href="#pt-physique">Physique</a></li>
+                        <li><a href="#pt-si">SI</a></li>
+                        <li><a href="#pt-oraux">Oraux</a></li>
+                        <li><a href="#pt-organisation">Organisation</a></li>
+                    </ul>
+                </li>
+                
+                <li>
+                    <span class="toggle">PTSI</span>
+                    <ul class="submenu">
+                        <li><a href="#ptsi-anglais">Anglais</a></li>
+                        <li><a href="#ptsi-info">Info</a></li>
+                        <li><a href="#ptsi-maths">Maths</a></li>
+                        <li><a href="#ptsi-physique">Physique</a></li>
+                        <li><a href="#ptsi-sii">SII</a></li>
+                    </ul>
+                </li>
+                
+                <li><a href="tipe.html">TIPE</a></li>
+                <li><a href="#ressources">Ressources Sup.</a></li>
+            </ul>
+        </nav>
+    </aside>
 
-        <div class="note">
-            <p><strong>Information importante :</strong> Pour le moment, je ne suis pas en mesure de créer des pages individuelles pour chaque sous-dossier et d'y lister tous les fichiers qu'ils contiennent. Je peux uniquement vous fournir cette vue d'ensemble des dossiers de premier niveau.</p>
-            <p>Si vous souhaitez des informations sur un dossier spécifique, n'hésitez pas à me le demander.</p>
-        </div>
+    <main class="main-content">
+        <h2>Bienvenue sur votre portail de cours</h2>
+        <p>Utilisez la navigation sur la gauche pour accéder à vos matières et documents.</p>
+        <p>Ce site est une version organisée de votre dossier <strong>Prépa</strong>.</p>
+    </main>
 
-        <h2 id="pt">Dossier : PT</h2>
-        <p>Ce dossier contient des éléments liés à la filière PT. (Contenu détaillé non disponible pour le moment.)</p>
+    <script>
+        // Script simple pour les menus déroulants de la barre latérale
+        document.querySelectorAll('.sidebar .toggle').forEach(item => {
+            item.addEventListener('click', event => {
+                let submenu = item.nextElementSibling;
+                if (submenu.style.display === "block") {
+                    submenu.style.display = "none";
+                } else {
+                    submenu.style.display = "block";
+                }
+            });
+        });
+    </script>
 
-        <h2 id="ptsi">Dossier : PTSI</h2>
-        <p>Ce dossier contient des éléments liés à la filière PTSI. (Contenu détaillé non disponible pour le moment.)</p>
-
-        <h2 id="tipe">Dossier : TIPE</h2>
-        <p>Ce dossier contient des éléments liés aux TIPE (Travaux d'Initiative Personnelle Encadrés). (Contenu détaillé non disponible pour le moment.)</p>
-
-        <h2 id="organisation">Dossier : Organisation</h2>
-        <p>Ce dossier contient des éléments liés à l'organisation. (Contenu détaillé non disponible pour le moment.)</p>
-
-        <h2 id="si">Dossier : SI</h2>
-        <p>Ce dossier contient des éléments liés aux Sciences de l'Ingénieur. (Contenu détaillé non disponible pour le moment.)</p>
-
-        <h2 id="prepa">Dossier : Prépa</h2>
-        <p>Ce dossier contient des éléments liés à la Prépa. (Contenu détaillé non disponible pour le moment.)</p>
-    </div>
 </body>
 </html>
