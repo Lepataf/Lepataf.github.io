@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PT - Maths</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <aside class="sidebar">
+        <h1>Mes Cours</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Accueil</a></li>
+                <li>
+                    <span class="toggle">PT</span>
+                    <ul class="submenu" style="display: block;"> <li><a href="#pt-anglais">ANGLAIS</a></li>
+                        <li><a href="#pt-francais">Français</a></li>
+                        <li><a href="#pt-info">INFO</a></li>
+                        <li><a href="pt_maths.html">MATHS</a></li>
+                        <li><a href="#pt-physique">Physique</a></li>
+                        <li><a href="#pt-si">SI</a></li>
+                        <li><a href="#pt-oraux">Oraux</a></li>
+                        <li><a href="#pt-organisation">Organisation</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <span class="toggle">PTSI</span>
+                    <ul class="submenu">
+                        <li><a href="#ptsi-anglais">Anglais</a></li>
+                        <li><a href="#ptsi-info">Info</a></li>
+                        <li><a href="#ptsi-maths">Maths</a></li>
+                        <li><a href="#ptsi-physique">Physique</a></li>
+                        <li><a href="#ptsi-sii">SII</a></li>
+                    </ul>
+                </li>
+                <li><a href="tipe.html">TIPE</a></li>
+                <li><a href="#ressources">Ressources Sup.</a></li>
+            </ul>
+        </nav>
+    </aside>
+
+    <main class="main-content">
+        <h2>Maths (PT)</h2>
+        
+        <button class="accordion">COURS [cite: 1169]</button>
+        <div class="panel">
+            <ul>
+                <li><a href="fichiers/PT/MATHS/COURS/00TrigonometrieUltime.pdf" target="_blank">00TrigonometrieUltime.pdf [cite: 1176]</a></li>
+                <li><a href="fichiers/PT/MATHS/COURS/00_revisionsGeometriePlane.pdf" target="_blank">00_revisionsGeometriePlane.pdf [cite: 1177]</a></li>
+                <li><a href="fichiers/PT/MATHS/COURS/Cours_01_EVComplements.pdf" target="_blank">Cours_01_EVComplements.pdf [cite: 1178]</a></li>
+                </ul>
+        </div>
+
+        <button class="accordion">DEVOIRS [cite: 1170]</button>
+        <div class="panel">
+            <ul>
+                <li><a href="fichiers/PT/MATHS/DEVOIRS/DM0.pdf" target="_blank">DM0.pdf [cite: 1203]</a></li>
+                <li><a href="fichiers/PT/MATHS/DEVOIRS/DM0Corrige.pdf" target="_blank">DM0Corrige.pdf [cite: 1204]</a></li>
+                <li><a href="fichiers/PT/MATHS/DEVOIRS/DS1-Revisions.pdf" target="_blank">DS1-Revisions.pdf [cite: 1216]</a></li>
+                </ul>
+        </div>
+
+        <button class="accordion">FICHES [cite: 1171]</button>
+        <div class="panel">
+            <ul>
+                <li><a href="fichiers/PT/MATHS/FICHES/Methode-DES-exercices-Corrige.pdf" target="_blank">Methode-DES-exercices-Corrige.pdf [cite: 1237]</a></li>
+                <li><a href="fichiers/PT/MATHS/FICHES/Methodes_01_AlgLin.pdf" target="_blank">Methodes_01_AlgLin.pdf [cite: 1239]</a></li>
+                </ul>
+        </div>
+
+        <button class="accordion">ORAL [cite: 1172]</button>
+        <div class="panel">
+            <ul>
+                <li><a href="fichiers/PT/MATHS/ORAL/Conseils Oral.pdf" target="_blank">Conseils Oral.pdf [cite: 1245]</a></li>
+                <li><a href="fichiers/PT/MATHS/ORAL/Oraux_2024.pdf" target="_blank">Oraux_2024.pdf [cite: 1257]</a></li>
+                </ul>
+        </div>
+
+        <button class="accordion">TD [cite: 1173]</button>
+        <div class="panel">
+            <ul>
+                <li><a href="fichiers/PT/MATHS/TD/TD_00_revisionsGeometriePlane.pdf" target="_blank">TD_00_revisionsGeometriePlane.pdf [cite: 1268]</a></li>
+                <li><a href="fichiers/PT/MATHS/TD/TD_01_EVComplementsCorrige.pdf" target="_blank">TD_01_EVComplementsCorrige.pdf [cite: 1269]</a></li>
+                </ul>
+        </div>
+
+    </main>
+
+    <script>
+        // Script simple pour les menus déroulants de la barre latérale
+        document.querySelectorAll('.sidebar .toggle').forEach(item => {
+            item.addEventListener('click', event => {
+                let submenu = item.nextElementSibling;
+                if (submenu.style.display === "block") {
+                    submenu.style.display = "none";
+                } else {
+                    submenu.style.display = "block";
+                }
+            });
+        });
+
+        // Script pour les accordéons
+        var acc = document.getElementsByClassName("accordion");
+        for (var i = 0; i < acc.length; i++) {
+            acc[i].addEventListener("click", function() {
+                this.classList.toggle("active");
+                var panel = this.nextElementSibling;
+                if (panel.style.maxHeight) {
+                    panel.style.maxHeight = null;
+                } else {
+                    panel.style.maxHeight = panel.scrollHeight + "px";
+                }
+            });
+        }
+    </script>
+
+</body>
+</html>
