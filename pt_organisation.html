@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PT - Organisation</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <aside class="sidebar">
+        <h1>Mes Cours</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Accueil</a></li>
+                
+                <li>
+                    <span class="toggle">PT</span>
+                    <ul class="submenu" style="display: block;">
+                        <li><a href="pt_anglais.html">ANGLAIS</a></li>
+                        <li><a href="pt_francais.html">Français</a></li>
+                        <li><a href="pt_info.html">INFO</a></li>
+                        <li><a href="pt_maths.html">MATHS</a></li>
+                        <li><a href="pt_physique.html">Physique</a></li>
+                        <li><a href="pt_si.html">SI</a></li>
+                        <li><a href="pt_oraux.html">Oraux</a></li>
+                        <li><a href="pt_organisation.html">Organisation</a></li>
+                    </ul>
+                </li>
+                
+                <li>
+                    <span class="toggle">PTSI</span>
+                    <ul class="submenu">
+                        <li><a href="ptsi_anglais.html">Anglais</a></li>
+                        <li><a href="ptsi_info.html">Info</a></li>
+                        <li><a href="ptsi_maths.html">Maths</a></li>
+                        <li><a href="ptsi_physique.html">Physique</a></li>
+                        <li><a href="ptsi_sii.html">SII</a></li>
+                    </ul>
+                </li>
+                
+                <li><a href="tipe.html">TIPE</a></li>
+                <li><a href="ressources.html">Ressources Sup.</a></li>
+            </ul>
+        </nav>
+    </aside>
+
+    <main class="main-content">
+        <h2>Organisation (PT)</h2>
+        
+        <button class="accordion">Formulaires et Méthodes</button>
+        <div class="panel">
+            <ul>
+                <li><a href="fichiers/PT/Organisation/2024_BanquePT_Physique_Formulaire.pdf" target="_blank">2024_BanquePT_Physique_Formulaire.pdf</a></li>
+                <li><a href="fichiers/PT/Organisation/Formulaire - Thermodynamique.pdf" target="_blank">Formulaire - Thermodynamique.pdf</a></li>
+                <li><a href="fichiers/PT/Organisation/Formulaire Electromag.pdf" target="_blank">Formulaire Electromag.pdf</a></li>
+                <li><a href="fichiers/PT/Organisation/Formulaire Optique.pdf" target="_blank">Formulaire Optique.pdf</a></li>
+                <li><a href="fichiers/PT/Organisation/Formulaires et méthodes PT Physique-Chimie.pdf" target="_blank">Formulaires et méthodes PT Physique-Chimie.pdf</a></li>
+                <li><a href="fichiers/PT/Organisation/formulaires-maths-physique-chimie-pt.pdf" target="_blank">formulaires-maths-physique-chimie-pt.pdf</a></li>
+            </ul>
+        </div>
+
+    </main>
+
+    <script>
+        // Script simple pour les menus déroulants de la barre latérale
+        document.querySelectorAll('.sidebar .toggle').forEach(item => {
+            item.addEventListener('click', event => {
+                let submenu = item.nextElementSibling;
+                if (submenu.style.display === "block") {
+                    submenu.style.display = "none";
+                } else {
+                    submenu.style.display = "block";
+                }
+            });
+        });
+
+        // Script pour les accordéons
+        var acc = document.getElementsByClassName("accordion");
+        for (var i = 0; i < acc.length; i++) {
+            acc[i].addEventListener("click", function() {
+                this.classList.toggle("active");
+                var panel = this.nextElementSibling;
+                if (panel.style.maxHeight) {
+                    panel.style.maxHeight = null;
+                } else {
+                    panel.style.maxHeight = panel.scrollHeight + "px";
+                }
+            });
+        }
+    </script>
+
+</body>
+</html>
